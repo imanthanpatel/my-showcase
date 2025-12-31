@@ -45,7 +45,7 @@ const Navigation = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
-            <Button variant="hero" size="sm">
+            <Button variant="hero" size="sm" onClick={()=>window.open("/Manthan.pdf","_blank")}>
               Resume
             </Button>
           </div>

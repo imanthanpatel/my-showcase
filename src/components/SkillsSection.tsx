@@ -1,17 +1,17 @@
 const skills = [
   { name: "React", level: 90, category: "Frontend" },
-  { name: "TypeScript", level: 85, category: "Languages" },
-  { name: "Node.js", level: 80, category: "Backend" },
+  { name: "Java", level: 75, category: "Languages" },
+  // { name: "Node.js", level: 80, category: "Backend" },
   { name: "Python", level: 75, category: "Languages" },
-  { name: "Tailwind CSS", level: 95, category: "Frontend" },
-  { name: "PostgreSQL", level: 70, category: "Database" },
+  { name: "Tailwind CSS", level: 85, category: "Frontend" },
+  { name: "PostgreSQL", level: 65, category: "Database" },
   { name: "Git", level: 85, category: "Tools" },
-  { name: "Docker", level: 65, category: "DevOps" },
+  { name: "Docker", level: 10, category: "DevOps" },
 ];
 
 const technologies = [
-  "JavaScript", "HTML5", "CSS3", "Next.js", "Vue.js", "GraphQL",
-  "REST APIs", "MongoDB", "Redis", "AWS", "Figma", "Jest",
+  "JavaScript", "HTML5", "CSS3", "Next.js", 
+  "REST APIs", "MongoDB",  "AWS", "Figma", "Spring Boot"
 ];
 
 const SkillsSection = () => {
