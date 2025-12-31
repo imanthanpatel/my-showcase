@@ -8,12 +8,12 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-muted-foreground text-sm flex items-center gap-1">
-            Built with <Heart size={14} className="text-primary" /> by Your Name © {currentYear}
+            Built with <Heart size={14} className="text-primary" /> by Manthan Patel © {currentYear}
           </p>
 
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com"
+              href="https://github.com/imanthanpatel"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -22,7 +22,7 @@ const Footer = () => {
               <Github size={18} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/manthanpatel24/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -30,7 +30,7 @@ const Footer = () => {
             >
               <Linkedin size={18} />
             </a>
-            <a
+            {/* <a
               href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -38,7 +38,7 @@ const Footer = () => {
               aria-label="Twitter"
             >
               <Twitter size={18} />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
