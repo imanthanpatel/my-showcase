@@ -18,14 +18,14 @@ const projects = [
     live: "#",
     featured: true,
   },
-  // {
-  //   title: "AI Content Generator",
-  //   description: "An AI-powered application that generates marketing copy and blog content.",
-  //   tech: ["Python", "FastAPI", "OpenAI", "React"],
-  //   github: "#",
-  //   live: "#",
-  //   featured: true,
-  // },
+  {
+    title: "Airport Navigation System",
+    description: "•	Developed an interactive airport gate navigation system using React.js, featuring dynamic terminal and gate selection with a responsive , user-friendly interface",
+    tech: ["React", "TailwindCSS"],
+    github: "https://github.com/imanthanpatel/airport-ui",
+    live: "https://airport-ui.vercel.app/",
+    featured: true,
+  },
   {
     title: "Portfolio Template",
     description: "A customizable portfolio template for developers and designers.",

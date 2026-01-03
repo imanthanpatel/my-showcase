@@ -7,11 +7,12 @@ const skills = [
   { name: "PostgreSQL", level: 65, category: "Database" },
   { name: "Git", level: 85, category: "Tools" },
   { name: "Docker", level: 10, category: "DevOps" },
+  { name: "Spring Boot", level: 10, category: "Backend Devlopment" },
 ];
 
 const technologies = [
   "JavaScript", "HTML5", "CSS3", "Next.js", 
-  "REST APIs", "MongoDB",  "AWS", "Figma", "Spring Boot"
+  "REST APIs", "MongoDB",  "AWS", "Figma", "SpringSecurity"
 ];
 
 const SkillsSection = () => {
