@@ -13,19 +13,21 @@ const experiences = [
       "Maintained smooth navigation and consistent UI across pages"      
     ]
   },
-  // {
-  //   title: "Full Stack Developer",
-  //   company: "Startup Inc",
-  //   location: "New York, NY",
-  //   duration: "2020 - 2022",
-  //   description: "Developed and maintained full-stack applications using React and Node.js.",
-  //   image: "/placeholder.svg",
-  //   highlights: [
-  //     "Created React dashboard",
-  //     "Implemented RESTful APIs",
-  //     "Improved performance by 40%"
-  //   ]
-  // },
+  {
+    title: "IT associate ",
+    company: "GSFC University",
+    location: "Vadodara, Gujarat",
+    duration: "2026 - Present",
+    description: "Working as an Associate, contributing to computer hardware maintenance and basic networking tasks. Assisting in installation, configuration, and troubleshooting of systems, including hardware components and network connectivity. Gaining practical experience in system diagnostics, LAN setup, and technical support.",
+    image: "/placeholder.svg",
+    highlights: [
+      "Improved system performance by identifying and resolving hardware faults.",
+      "Ensured reliable network connectivity through LAN setup and troubleshooting.",
+      "Assisted in efficient deployment of systems and network infrastructure.",
+      "Developed practical skills in real-world IT support and maintenance.",
+
+    ]
+  },
   // {
   //   title: "Junior Developer",
   //   company: "Digital Agency",
