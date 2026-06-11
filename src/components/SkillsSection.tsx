@@ -1,18 +1,36 @@
-const skills = [
-  { name: "React", level: 90, category: "Frontend" },
-  { name: "Java", level: 75, category: "Languages" },
-  // { name: "Node.js", level: 80, category: "Backend" },
-  { name: "Python", level: 75, category: "Languages" },
-  { name: "Tailwind CSS", level: 85, category: "Frontend" },
-  { name: "PostgreSQL", level: 65, category: "Database" },
-  { name: "Git", level: 85, category: "Tools" },
-  { name: "Docker", level: 10, category: "DevOps" },
-  { name: "Spring Boot", level: 10, category: "Backend Devlopment" },
-];
+import { Code2, Database, Wrench, Server, Layers, Terminal } from "lucide-react";
 
-const technologies = [
-  "JavaScript", "HTML5", "CSS3", "Next.js", 
-  "REST APIs", "MongoDB",  "AWS", "Figma", "SpringSecurity"
+const skillCategories = [
+  {
+    title: "Frontend",
+    icon: Layers,
+    skills: ["React", "Next.js", "Tailwind CSS", "HTML5", "CSS3", "JavaScript"],
+  },
+  {
+    title: "Backend",
+    icon: Server,
+    skills: ["Spring Boot", "Spring Security", "REST APIs", "Node.js"],
+  },
+  {
+    title: "Languages",
+    icon: Code2,
+    skills: ["Java", "Python", "TypeScript", "JavaScript"],
+  },
+  {
+    title: "Database",
+    icon: Database,
+    skills: ["PostgreSQL", "MongoDB", "MySQL"],
+  },
+  {
+    title: "DevOps & Cloud",
+    icon: Terminal,
+    skills: ["Docker", "AWS", "CI/CD"],
+  },
+  {
+    title: "Tools",
+    icon: Wrench,
+    skills: ["Git", "GitHub", "Figma", "VS Code", "Postman"],
+  },
 ];
 
 const SkillsSection = () => {
@@ -27,45 +45,40 @@ const SkillsSection = () => {
             </h2>
             <div className="w-24 h-1 gradient-hero mx-auto rounded-full mb-6" />
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              A collection of technologies and tools I've mastered over the years
+              Technologies and tools I work with to craft modern, scalable applications
             </p>
           </div>
 
-          {/* Skills Progress Bars */}
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            {skills.map((skill, index) => (
-              <div
-                key={skill.name}
-                className="group"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex justify-between mb-2">
-                  <span className="font-medium text-foreground">{skill.name}</span>
-                  <span className="text-sm text-muted-foreground">{skill.category}</span>
-                </div>
-                <div className="h-3 bg-secondary rounded-full overflow-hidden">
-                  <div
-                    className="h-full gradient-hero rounded-full transition-all duration-1000 ease-out group-hover:glow-subtle"
-                    style={{ width: `${skill.level}%` }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Technology Tags */}
-          <div className="text-center">
-            <h3 className="text-xl font-semibold mb-6 text-foreground">Other Technologies</h3>
-            <div className="flex flex-wrap justify-center gap-3">
-              {technologies.map((tech) => (
-                <span
-                  key={tech}
-                  className="px-4 py-2 rounded-full bg-secondary border border-border text-sm text-muted-foreground hover:border-primary/50 hover:text-foreground transition-all duration-300 cursor-default"
+          {/* Skill Category Cards */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {skillCategories.map((category) => {
+              const Icon = category.icon;
+              return (
+                <div
+                  key={category.title}
+                  className="group relative gradient-card border border-border rounded-2xl p-6 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:glow-subtle"
                 >
-                  {tech}
-                </span>
-              ))}
-            </div>
+                  <div className="flex items-center gap-4 mb-5">
+                    <div className="w-12 h-12 rounded-xl gradient-hero flex items-center justify-center shrink-0">
+                      <Icon className="w-6 h-6 text-primary-foreground" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-foreground">
+                      {category.title}
+                    </h3>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {category.skills.map((skill) => (
+                      <span
+                        key={skill}
+                        className="px-3 py-1.5 rounded-lg bg-secondary/80 border border-border text-sm text-muted-foreground group-hover:text-foreground transition-colors"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
