@@ -27,6 +27,11 @@ const skillCategories = [
     skills: ["Docker", "AWS", "CI/CD"],
   },
   {
+    title: "Cybersecurity",
+    icon: Shield,
+    skills: ["Metasploit", "Kali Linux", "SearchSploit", "Burp Suite", "Nmap", "Wireshark"],
+  },
+  {
     title: "Tools",
     icon: Wrench,
     skills: ["Git", "GitHub", "Figma", "VS Code", "Postman"],
