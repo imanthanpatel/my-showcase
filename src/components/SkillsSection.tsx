@@ -1,4 +1,4 @@
-import { Code2, Database, Wrench, Server, Layers, Terminal } from "lucide-react";
+import { Code2, Database, Wrench, Server, Layers, Terminal, Shield } from "lucide-react";
 
 const skillCategories = [
   {
@@ -25,6 +25,11 @@ const skillCategories = [
     title: "DevOps & Cloud",
     icon: Terminal,
     skills: ["Docker", "AWS", "CI/CD"],
+  },
+  {
+    title: "Cybersecurity",
+    icon: Shield,
+    skills: ["Metasploit", "Kali Linux", "SearchSploit", "Burp Suite", "Nmap", "Wireshark"],
   },
   {
     title: "Tools",
