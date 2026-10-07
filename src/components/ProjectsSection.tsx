@@ -2,54 +2,52 @@ import { ExternalLink, Github, Folder } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const projects = [
-  // {
-  //   title: "E-Commerce Platform",
-  //   description: "A full-featured online store with cart functionality, payment integration, and admin dashboard.",
-  //   tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
-  //   github: "#",
-  //   live: "#",
-  //   featured: true,
-  // },
   {
-    title: "Task Management App",
-    description: "Built a Task Tracker API enabling task creation and progress tracking.",
-    tech: ["Java", "Spring Boot", "Supabse"],
+    title: "Task Management API",
+    description:
+      "A RESTful Task Management API built with Java and Spring Boot for creating, managing, and tracking tasks. The project demonstrates backend API development, database integration, and structured application design.",
+    tech: ["Java", "Spring Boot", "Supabase", "REST API"],
     github: "https://github.com/imanthanpatel/Task-Tracker-API",
-    live: "#",
+    live: null,
     featured: true,
   },
+
   {
     title: "Airport Navigation System",
-    description: "•	Developed an interactive airport gate navigation system using React.js, featuring dynamic terminal and gate selection with a responsive , user-friendly interface",
-    tech: ["React", "TailwindCSS"],
+    description:
+      "An interactive airport navigation interface built with React that allows users to explore terminals and gates through dynamic selection. The responsive interface focuses on usability and intuitive navigation.",
+    tech: ["React", "Tailwind CSS", "JavaScript"],
     github: "https://github.com/imanthanpatel/airport-ui",
     live: "https://airport-ui.vercel.app/",
     featured: true,
   },
+
   {
-    title: "Portfolio Template",
-    description: "A customizable portfolio template for developers and designers.",
-    tech: ["React", "Tailwind CSS", "Framer Motion"],
+    title: "SentinelSIEM",
+    description:
+      "A lightweight Security Information and Event Management platform designed to collect, analyze, and monitor security events. The project includes log ingestion, rule-based detection, alert management, role-based access, and MITRE ATT&CK mapping.",
+    tech: [
+      "Django",
+      "Django REST Framework",
+      "React",
+      "MySQL",
+      "SIEM",
+      "MITRE ATT&CK",
+    ],
     github: "#",
+    live: null,
+    featured: true,
+  },
+
+  {
+    title: "Portfolio Website",
+    description:
+      "A responsive personal portfolio website showcasing cybersecurity, IT infrastructure, software development experience, technical skills, and projects.",
+    tech: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+    github: "https://github.com/imanthanpatel",
     live: "https://www.manthanpatel.me/",
     featured: false,
   },
-  // {
-  //   title: "Weather Dashboard",
-  //   description: "Real-time weather tracking with beautiful visualizations.",
-  //   tech: ["Vue.js", "D3.js", "Weather API"],
-  //   github: "#",
-  //   live: "#",
-  //   featured: false,
-  // },
-  // {
-  //   title: "Chat Application",
-  //   description: "Real-time messaging app with group chats and file sharing.",
-  //   tech: ["React", "Socket.io", "MongoDB"],
-  //   github: "#",
-  //   live: "#",
-  //   featured: false,
-  // },
 ];
 
 const ProjectsSection = () => {
@@ -57,45 +55,70 @@ const ProjectsSection = () => {
   const otherProjects = projects.filter((p) => !p.featured);
 
   return (
-    <section id="projects" className="py-24 md:py-32 relative">
+    <section
+      id="projects"
+      className="py-24 md:py-32 relative"
+      aria-labelledby="projects-heading"
+    >
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
+
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2
+              id="projects-heading"
+              className="text-4xl md:text-5xl font-bold mb-4"
+            >
               Featured <span className="text-gradient">Projects</span>
             </h2>
+
             <div className="w-24 h-1 gradient-hero mx-auto rounded-full mb-6" />
+
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Some of my recent work that showcases my skills and passion
+              Selected projects demonstrating my experience in cybersecurity,
+              software development, security monitoring, and modern web
+              technologies.
             </p>
           </div>
 
           {/* Featured Projects */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            {featuredProjects.map((project, index) => (
-              <div
+            {featuredProjects.map((project) => (
+              <article
                 key={project.title}
                 className="group gradient-card rounded-2xl border border-border p-6 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:glow-subtle"
               >
                 {/* Project Header */}
                 <div className="flex items-center justify-between mb-4">
-                  <Folder className="w-10 h-10 text-primary" />
+                  <Folder
+                    className="w-10 h-10 text-primary"
+                    aria-hidden="true"
+                  />
+
                   <div className="flex gap-3">
-                    <a
-                      href={project.github}
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                      aria-label="GitHub Repository"
-                    >
-                      <Github size={20} />
-                    </a>
-                    <a
-                      href={project.live}
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                      aria-label="Live Demo"
-                    >
-                      <ExternalLink size={20} />
-                    </a>
+                    {project.github !== "#" && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                        aria-label={`${project.title} GitHub repository`}
+                      >
+                        <Github size={20} />
+                      </a>
+                    )}
+
+                    {project.live && (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                        aria-label={`${project.title} live demo`}
+                      >
+                        <ExternalLink size={20} />
+                      </a>
+                    )}
                   </div>
                 </div>
 
@@ -103,6 +126,7 @@ const ProjectsSection = () => {
                 <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
+
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   {project.description}
                 </p>
@@ -118,54 +142,75 @@ const ProjectsSection = () => {
                     </span>
                   ))}
                 </div>
-              </div>
+              </article>
             ))}
           </div>
 
           {/* Other Projects */}
-          <div>
-            <h3 className="text-2xl font-semibold text-center mb-8 text-foreground">
-              Other Noteworthy Projects
-            </h3>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {otherProjects.map((project) => (
-                <div
-                  key={project.title}
-                  className="p-5 rounded-xl bg-secondary/50 border border-border hover:border-primary/30 transition-all duration-300 group"
-                >
-                  <h4 className="font-medium text-foreground mb-2 group-hover:text-primary transition-colors">
-                    {project.title}
-                  </h4>
-                  <p className="text-sm text-muted-foreground mb-3">
-                    {project.description}
-                  </p>
-                  <div className="flex gap-3">
-                    <a
-                      href={project.github}
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      <Github size={16} />
-                    </a>
-                    <a
-                      href={project.live}
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      <ExternalLink size={16} />
-                    </a>
-                  </div>
-                </div>
-              ))}
+          {otherProjects.length > 0 && (
+            <div>
+              <h3 className="text-2xl font-semibold text-center mb-8 text-foreground">
+                Other Noteworthy Projects
+              </h3>
+
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {otherProjects.map((project) => (
+                  <article
+                    key={project.title}
+                    className="p-5 rounded-xl bg-secondary/50 border border-border hover:border-primary/30 transition-all duration-300 group"
+                  >
+                    <h4 className="font-medium text-foreground mb-2 group-hover:text-primary transition-colors">
+                      {project.title}
+                    </h4>
+
+                    <p className="text-sm text-muted-foreground mb-3">
+                      {project.description}
+                    </p>
+
+                    <div className="flex gap-3">
+                      {project.github !== "#" && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`${project.title} GitHub repository`}
+                          className="text-muted-foreground hover:text-primary transition-colors"
+                        >
+                          <Github size={16} />
+                        </a>
+                      )}
+
+                      {project.live && (
+                        <a
+                          href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`${project.title} live demo`}
+                          className="text-muted-foreground hover:text-primary transition-colors"
+                        >
+                          <ExternalLink size={16} />
+                        </a>
+                      )}
+                    </div>
+                  </article>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
           {/* View More Button */}
           <div className="text-center mt-12">
             <Button variant="outline" size="lg" asChild>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://github.com/imanthanpatel"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 View More on GitHub
               </a>
             </Button>
           </div>
+
         </div>
       </div>
     </section>
