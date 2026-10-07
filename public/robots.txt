@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://manthanpatel.me/sitemap.xml
+Sitemap: https://www.manthanpatel.me/sitemap.xml
