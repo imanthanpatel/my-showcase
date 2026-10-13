@@ -1,23 +1,28 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Primary SEO -->
     <title>Manthan Patel | Cybersecurity Student & Security Analyst</title>
 
     <meta
       name="description"
-      content="Manthan Patel is a Computer Science student and Security Analyst focused on cybersecurity, SOC, SIEM, network security, ethical hacking, and security research."
+      content="Manthan Patel is a Computer Science student focused on cybersecurity, SOC operations, SIEM, network security, ethical hacking, and security research."
     />
 
     <meta name="author" content="Manthan Patel" />
     <meta name="robots" content="index, follow" />
 
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://www.manthanpatel.me/" />
 
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.manthanpatel.me/" />
     <meta
@@ -26,31 +31,49 @@
     />
     <meta
       property="og:description"
-      content="Cybersecurity portfolio of Manthan Patel, featuring security projects, SOC experience, SIEM research, networking, and ethical hacking."
+      content="Explore Manthan Patel's cybersecurity portfolio, projects, security operations, SIEM, networking, and technical experience."
     />
     <meta property="og:site_name" content="Manthan Patel" />
 
-    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary" />
     <meta
       name="twitter:title"
       content="Manthan Patel | Cybersecurity Student & Security Analyst"
     />
     <meta
       name="twitter:description"
-      content="Cybersecurity portfolio of Manthan Patel, focused on SOC, SIEM, networking, ethical hacking, and security research."
+      content="Manthan Patel's portfolio covering cybersecurity, SOC operations, SIEM, networking, ethical hacking, and security research."
     />
 
+    <!-- Structured Data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Manthan Patel",
-        "url": "https://www.manthanpatel.me/",
-        "jobTitle": "Security Analyst",
-        "description": "Computer Science student and cybersecurity professional focused on SOC, SIEM, networking, ethical hacking, and security research.",
-        "sameAs": [
-          "https://www.linkedin.com/in/manthanpatel24/",
-          "https://github.com/imanthanpatel"
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://www.manthanpatel.me/#person",
+            "name": "Manthan Patel",
+            "url": "https://www.manthanpatel.me/",
+            "jobTitle": "Cybersecurity Student & Security Analyst",
+            "description": "Computer Science student focused on cybersecurity, security operations, SIEM, networking, ethical hacking, and security research.",
+            "sameAs": [
+              "https://www.linkedin.com/in/manthanpatel24/",
+              "https://github.com/imanthanpatel"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.manthanpatel.me/#website",
+            "url": "https://www.manthanpatel.me/",
+            "name": "Manthan Patel",
+            "alternateName": "Manthan Patel Portfolio",
+            "publisher": {
+              "@id": "https://www.manthanpatel.me/#person"
+            },
+            "inLanguage": "en"
+          }
         ]
       }
     </script>
@@ -61,3 +84,4 @@
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
+```
